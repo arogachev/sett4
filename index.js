@@ -6,7 +6,15 @@ const COMPARE_GREATER = 'G'
 const COMPARE_LESS = 'L'
 const COMPARE_EQUAL = 'E'
 
-module.exports = sum
+if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
+    module.exports = sum
+} else {
+    if (typeof define === 'function' && define.amd) {
+        define([], () => {return sum})
+    } else {
+        window['sum'] = sum
+    }
+}
 
 function sum(a, b) {
     validate(a)

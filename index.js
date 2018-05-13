@@ -98,6 +98,24 @@ function compare(a, b) {
     return COMPARE_EQUAL
 }
 
+function trimLeft(number) {
+    return number.replace(/^0+/, number.includes(DECIMAL_SEPARATOR) ? ZERO : '')
+}
+
+function trimRight(number) {
+    if (!number.includes(DECIMAL_SEPARATOR)) {
+        return number
+    }
+
+    return number.replace(/0+$/, '').replace(/\.$/, '')
+}
+
+function trim(number) {
+    number = trimLeft(number)
+
+    return trimRight(number)
+}
+
 function add(a, b) {
     let sum = ''
     let rest = 0
@@ -123,7 +141,7 @@ function add(a, b) {
         sum = rest + sum
     }
 
-    return sum
+    return trimRight(sum)
 }
 
 function subtract(a, b) {
@@ -153,5 +171,5 @@ function subtract(a, b) {
         diff = c + diff
     }
 
-    return diff.replace(/^0+/, ZERO).replace(/0+$/, '').replace(/\.$/, '')
+    return trim(diff)
 }

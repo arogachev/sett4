@@ -1,0 +1,24 @@
+{
+  "name": "sum",
+  "version": "1.0.0",
+  "description": "Sum of numbers stored as strings",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arogachev/sett4.git"
+  },
+  "author": "Alexey Rogachev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arogachev/sett4/issues"
+  },
+  "homepage": "https://github.com/arogachev/sett4#readme",
+  "devDependencies": {
+    "leche": "^2.2.3",
+    "mocha": "^5.1.1"
+  }
+}

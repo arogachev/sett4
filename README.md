@@ -4,6 +4,7 @@ Sum of numbers stored as strings.
 
 ## Features
 
+- Support of numbers in decimal numeral system
 - Support of integer and float numbers
 - Support of negative numbers
 - Support of big numbers (> `Number.MAX_SAFE_INTEGER`)
